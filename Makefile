@@ -17,7 +17,7 @@ down:
 	docker compose -f ${DOCKER_COMPOSE_FILE} down
 
 clean: down
-	docker system prume -a --force
+	docker system prune -a --force
 
 fclean: clean
 	sudo rm -rf ${DATA_PATH}/wordpress
