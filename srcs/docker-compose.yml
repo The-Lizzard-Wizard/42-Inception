@@ -14,6 +14,40 @@ services:
       - inception_network
     expose:
       - "3306"
+  
+  nginx:
+    build: ./requirements/nginx
+    container_name: nginx
+    image: nginx
+    pull_policy: build
+    restart: always
+    depends_on:
+      - wordpress
+    env_file:
+      - .env
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - inception_network
+    ports:
+      - "443:443"
+  
+  wordpress:
+    build: ./requirements/wordpress
+    container_name: wordpress
+    iamge: wordpress
+    pull_policy: build
+    restart: always
+    depends_on:
+      - mariadb
+    env_file:
+      - .env
+    volumes:
+      - wordpress_data:var/www/html
+    networks:
+      - inception_network
+    expose:
+      - "9000"
 
 networks:
   inception_network:
@@ -26,3 +60,10 @@ volumes:
       type: none
       o: bind
       device: /home/${USER}/data/mariadb
+
+  wordpress_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/${USER}/data/wordpress
