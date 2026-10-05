@@ -111,22 +111,18 @@ Create a file srcs/.env based on required variables:
 
 .env.exemple:
 ```code
-DOMAIN_NAME=authomas.42.fr
-SITE_TITLE=Inception
-
+DOMAIN_NAME=gchauvet.42.fr
+SITE_TITLE=42-inception
 MYSQL_DATABASE=wordpress
-MYSQL_USER=wp_authomas
-MYSQL_PASSWORD=wppassword123
-MYSQL_ROOT_PASSWORD=rootpassword123
-
-//(can't contain "admin")
-WP_ADMIN_USER=wpa_authomas
-WP_ADMIN_PASSWORD=password123 
-WP_ADMIN_EMAIL=authomas@student.42lyon.fr 
-
-WP_USER=authomas
-WP_PASSWORD=userpassword123
-WP_EMAIL=authomas@student.42lyon.fr
+MYSQL_USER=mysql_gchauvet
+MYSQL_PASSWORD=pass
+MYSQL_ROOT_PASSWORD=pass_root
+ADMIN_USER=staff
+ADMIN_PASS=staff_pass
+ADMIN_MAIL=gchauvet@student.42lyon.fr
+WP_USER=gchauvet
+WP_MAIL=gchauvet@student.42lyon.fr
+WP_USER_PASS=wp_pass
 ```
 ### Use
 
@@ -162,13 +158,13 @@ make re
 
 Once the infrastructure is started:
 
-* Open the web browser and go to https://authomas.42.fr.
+* Open the web browser and go to https://gchauvet.42.fr.
 
 * Accept the warning related to auto-signed SSL certificate.
 
 For testing the WordPress admin panel:
 
-* URL : https://authomas.42.fr/wp-admin
+* URL : https://gchauvet.42.fr/wp-admin
 
 Admin User : Defined in file .env (WP_ADMIN_USER)\
 Admin Password : Defined in file .env (WP_ADMIN_PASSWORD)
@@ -198,10 +194,6 @@ Admin Password : Defined in file .env (WP_ADMIN_PASSWORD)
 ### MariaDB
 
 [MariaDB Server Documentation](https://mariadb.com/docs/) —  mariadb-install-db, init users/bases with SQL.
-
-### Peer learning
-
-Special thanks to `gcros` for debugging and to help understand the documentation.
 
 ### AI usage
 

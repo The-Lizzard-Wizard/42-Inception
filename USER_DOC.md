@@ -44,13 +44,13 @@ Before accessing the site, ensure your host machine's /etc/hosts file maps 127.0
 
 Once the infrastructure is started:
 
-* Open the web browser and go to https://authomas.42.fr.
+* Open the web browser and go to https://gchauvet.42.fr.
 
 * Accept the warning related to auto-signed SSL certificate.
 
 For testing the WordPress admin panel:
 
-* URL : https://authomas.42.fr/wp-admin
+* URL : https://gchauvet.42.fr/wp-admin
 
 ## Locating and Managing Credentials
 All sensitive configuration parameters and credentials are managed through environment variables stored in the .env file located inside the srcs/ directory (srcs/.env).
@@ -70,11 +70,11 @@ Database Application Access:
 
 WordPress Super Administrator:
 
-- WP_ADMIN_USER — Administrator username.
+- ADMIN_USER — Administrator username.
 
-- WP_ADMIN_PASSWORD — Administrator password.
+- ADMIN_PASSWORD — Administrator password.
 
-- WP_ADMIN_EMAIL — Administrator email address.
+- ADMIN_EMAIL — Administrator email address.
 
 WordPress Standard User:
 

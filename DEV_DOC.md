@@ -27,7 +27,7 @@ Ensure your development environment meets the following requirements:
         └── wordpress/    --> Dockerfile, conf/, tools/
 ```
 
-### Initial Configuration & Secrets Setup
+### Initial Configuration
 
 - Link local IP to the domain name on the host machine by editing the file /etc/hosts :
 ```bash
