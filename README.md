@@ -103,7 +103,7 @@ The project requires named Docker volumes with drivers configured to be pointing
 
 Link local IP to the domain name on the host machine by editing the file /etc/hosts :
 ```bash
-sudo echo "127.0.0.1 authomas.42.fr" >> /etc/hosts
+sudo echo "127.0.0.1 gchauvet.42.fr" >> /etc/hosts
 ```
 
 ### Environnement variable (.env)
